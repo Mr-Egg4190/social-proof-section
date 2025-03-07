@@ -4,5 +4,21 @@ body {
 }
 
 #content {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/bg-pattern-top-desktop.svg'), url('images/bg-pattern-bottom-desktop.svg');
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+}
 
+h1 {
+    margin: 0;
+}
+
+.rating {
+    display: flex;
+}
+
+.profilePic {
+    border-radius: 100% ;
 }
