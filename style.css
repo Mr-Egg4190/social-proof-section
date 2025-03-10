@@ -13,16 +13,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .container {
     width: 80%;
-    height: 40%;
+    height: auto;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap:5vw;
 }
 
 #description {
@@ -42,10 +44,11 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    white-space: nowrap;
 }
 
 .review {
-    width: 30%;
+    width: 100%;
 }
 
 .profilePic {
@@ -57,13 +60,21 @@ p {
     display: flex;
     align-items: center;
     white-space: nowrap;
-    gap: 0.5vw;
+    gap: 1vw;
 }
 
 @media (min-width: 1024px) {
     .container {
+        height: 33%;
+
         flex-direction: row;
+        align-items:stretch;
+        gap: none;
     }
+
+    /* #topContainer > * {
+        width: 40%;
+    } */
 
     #description {
         text-align: left;
@@ -71,6 +82,10 @@ p {
 
     .rating {
         flex-direction: row;
+    }
+
+    .review {
+        width: 30%;
     }
 
     #reviews > .review:nth-child(2) {
@@ -81,11 +96,11 @@ p {
         margin-top: 6vh;
     }
 
-    #ratingContainer > .rating:nth-child(2) {
-        margin-left: 3vw;
+    /* #ratingContainer > .rating:nth-child(1) {
+        margin-right: 6vw;
     }
     
-    #ratingContainer > .rating:nth-child(3) {
-        margin-left: 6vw;
-    }
+    #ratingContainer > .rating:nth-child(2) {
+        margin-right: 3vw;
+    } */
 }
