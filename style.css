@@ -1,14 +1,22 @@
 body {
     padding: 0;
     margin: 0;
+
+    font-family: 'League Spartan', sans-serif;
 }
 
 #content {
     width: 100vw;
-    height: 100vh;
+    height: auto;
+
+    padding: 10vh 0;
+    gap: 5vh;
+
     background-image: url('images/bg-pattern-top-desktop.svg'), url('images/bg-pattern-bottom-desktop.svg');
     background-position: top left, bottom right;
     background-repeat: no-repeat;
+
+
 
     display: flex;
     flex-direction: column;
@@ -24,31 +32,72 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap:5vw;
+    gap: 5vw;
 }
 
 #description {
+    height: 100%;
+
     text-align: center;
+    color: hsl(303, 10%, 53%);
+
+    display: flex;
+    flex-direction:column ;
+    gap: 2.5vh;
 }
 
 h1 {
     margin: 0;
+    color: hsl(300, 43%, 22%);
+    font-size:40px;
+    font-weight: 700;
 }
 
 p {
     font-size: 15px;
+    line-height: 1.5;
     margin:0;
 }
 
-.rating {
+#ratingContainer {
+    width: calc(100% + 12vw);
+
     display: flex;
     flex-direction: column;
+    gap: 2vh;
+}
+
+.rating {
+    padding: 2vh 2.5vw;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vw;
+
     align-items: center;
     white-space: nowrap;
+
+    background-color: hsl(300, 24%, 96%);
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+    border-radius: 8px;
 }
 
 .review {
     width: 100%;
+    
+    padding: 2vh 6vw;
+    gap: 1vh;
+
+    background-color: hsl(300, 43%, 22%);
+    color: hsl(300, 24%, 96%);
+
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-evenly;
 }
 
 .profilePic {
@@ -60,24 +109,38 @@ p {
     display: flex;
     align-items: center;
     white-space: nowrap;
-    gap: 1vw;
+    gap: 1.5vw;
+}
+
+.buyerName p {
+    line-height: 1.25;
 }
 
 @media (min-width: 1024px) {
+    #content {
+        height: 100vh;
+
+        padding: 0;
+        gap: 0;
+    }
+
     .container {
         height: 33%;
 
         flex-direction: row;
-        align-items:stretch;
+        align-items:flex-start;
         gap: none;
     }
 
-    /* #topContainer > * {
-        width: 40%;
-    } */
-
     #description {
         text-align: left;
+    }
+
+    #ratingContainer {
+        height: 100%;
+        width: auto;
+        gap: 0;
+        justify-content: space-evenly;
     }
 
     .rating {
@@ -85,7 +148,9 @@ p {
     }
 
     .review {
-        width: 30%;
+        width: 40%;
+
+        padding: 2vh 2vw;
     }
 
     #reviews > .review:nth-child(2) {
@@ -96,11 +161,16 @@ p {
         margin-top: 6vh;
     }
 
-    /* #ratingContainer > .rating:nth-child(1) {
+    #ratingContainer > .rating:nth-child(1) {
         margin-right: 6vw;
     }
-    
+
     #ratingContainer > .rating:nth-child(2) {
+        margin-left: 3vw;
         margin-right: 3vw;
-    } */
+    }
+    
+    #ratingContainer > .rating:nth-child(3) {
+        margin-left: 6vw;
+    }
 }
